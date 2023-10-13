@@ -1,38 +1,159 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(32, 31, 31);
+  color: white;
+
+}
+
+#root {
+  height: 100vh;
+  display: flex;
+}
 .App {
-  text-align: center;
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #110f0f;
+    width: 30%;
+    margin: auto;
+    box-shadow: 13px 13px 20px 0px #3c3737;
+    border-radius: 7px;
+    padding: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title {
+  margin-bottom: 25px;
+  text-decoration: underline;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todoWrapper {
+  height: 50%;
+  justify-content: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-bottom: 17px;
+}
+
+.todoInput input{
+    height: 30px;
+    width: 100%;
+    padding: 6px;
+    outline-color: green;
+    margin-top: 8px;
+}
+
+.todoInputBtn {
+  display: flex;
+  justify-content: end;
+  margin-top: 11px;
+}
+
+.todoInputBtn button {
   color: white;
+  background: green;
+  font-size: 17px;
+  text-transform: lowercase;
+  padding: 2px 17px;
+  border: none;
+  border-radius: 2px;
+  font-family: cursive;
+  cursor: pointer;
+  transition: 0.4s;
 }
 
-.App-link {
-  color: #61dafb;
+.todoInputBtn button:hover {
+  background-color: rgb(2, 98, 2);
+  letter-spacing: 2px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btnArea {
+  display: flex;
+  justify-content: space-between;
+  width: 45%;
+  margin-bottom: 18px;
 }
+
+.btnArea .todoInputBtn {
+  color: white;
+  background: green;
+  font-size: 17px;
+  text-transform: lowercase;
+  padding: 2px 17px;
+  border: none;
+  border-radius: 2px;
+  font-family: cursive;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.btnArea .todoInputBtn:hover {
+  background-color: rgb(2, 98, 2);
+  letter-spacing: 2px;
+}
+
+.todoList {
+  background: #66666670;
+  width: 95%;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid;
+  padding: 5px;
+    margin: 5px 0px;
+}
+
+.todoListItem h1 {
+  color: rgb(2, 98, 2);
+}
+
+.todoListIcon {
+  width: 20%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.deleteIcon {
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.4s;
+}
+
+.deleteIcon:hover {
+  color: red;
+}
+
+.chekIcon {
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.4s;
+}
+
+.chekIcon:hover {
+  color: greenyellow;
+}
+
+.active {
+  color: white;
+  background: green;
+  font-size: 17px;
+  text-transform: lowercase;
+  padding: 2px 17px;
+  border: none;
+  border-radius: 2px;
+  font-family: cursive;
+  cursor: pointer;
+  transition: 0.4s;}
+
+
+  @media screen and (max-width:800px) {
+    .App {
+      width: auto !important;
+    }
+  }
